@@ -1,5 +1,9 @@
 # VAMP — Verified Authenticated Messaging Protocol
 
+> [!TIP]
+> This project is current in the early stages of ideation and prototyping. The design is not finalized, the implementation is not complete, and the roadmap is not set in stone. The goal of this repository is to explore the problem space and potential solutions in the open, with a reference implementation to validate the model. 
+> Feedback, contributions, and discussion are very welcome.
+
 VAMP is an open protocol for Identity-First Mail: a cryptographically verifiable, spam-resistant successor to legacy email.
 
 This project explores Identity-First Mail (IFM), a messaging model in which identity is cryptographic, capability is discoverable before send, native traffic is encrypted by default, and suspicious scale carries **sender-side cost**. VAMP is the protocol and reference implementation intended to realize that model.
