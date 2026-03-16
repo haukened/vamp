@@ -137,6 +137,8 @@ The important idea is simple:
 
 > The sender should bear the marginal cost of suspicious scale.
 
+For a deeper analysis of proof-of-work and other sender-cost mechanisms, see [Proof-of-Work Analysis](docs/proof-of-work-analysis.md).
+
 That flips the current asymmetry.
 
 ### 5. Revocation as First-Class State
