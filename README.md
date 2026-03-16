@@ -6,7 +6,7 @@
 
 VAMP is an open protocol for Identity-First Mail: a cryptographically verifiable, spam-resistant successor to legacy email.
 
-This project explores Identity-First Mail (IFM), a messaging model in which identity is cryptographic, capability is discoverable before send, native traffic is encrypted by default, and suspicious scale carries **sender-side cost**. VAMP is the protocol and reference implementation intended to realize that model.
+This project explores Identity-First Mail (IFM), a messaging model in which identity is cryptographic, capability is discoverable before send, native traffic is encrypted by default, and suspicious scale carries **[sender-side cost](docs/sender-cost-mechanics.md)**. VAMP is the protocol and reference implementation intended to realize that model.
 
 ## Why This Project Exists
 
@@ -67,6 +67,8 @@ That cost is not theoretical. Large providers process enormous volumes of abusiv
 VAMP starts from a different premise: the protocol should make identity verifiable, delivery capability discoverable before send, native traffic encrypted by default, and suspicious scale expensive for the sender rather than the receiver.
 
 The goal is not to build a prettier spam filter. It is to change the economics of messaging so abuse becomes harder to scale and easier to attribute.
+
+For a quantified 2026 snapshot of operator burden and spend, see [The 2026 Cost and Operational Burden of Spam](docs/spam-costs-and-volumes.md).
 
 ## What We Believe Instead
 
@@ -129,6 +131,8 @@ The current system makes large-scale abuse too cheap.
 
 We want a system where normal human communication remains easy, but bulk or unknown sending behavior triggers explicit cost. That cost could be computational, economic, or policy-based. The exact mechanism can evolve later.
 
+For a concrete, operator-aligned cost model and initial threshold ideas, see [MTA-Scoped Sender-Cost Mechanics](docs/sender-cost-mechanics.md) and [Email Volume Baselines for Threshold Design](docs/email-volume-baseline.md).
+
 The important idea is simple:
 
 > The sender should bear the marginal cost of suspicious scale.
@@ -159,6 +163,15 @@ That means receiving systems need downgrade-aware policy. At a high level:
 - Legacy SMTP remains available for domains that have not adopted VAMP, but it should not be a loophole for domains that have.
 
 In other words, interoperability matters, but downgrade abuse must not be allowed to hollow out the protocol. Compatibility is a bridge for migration, not an escape hatch from accountability.
+
+For a deeper deployment/threat-model analysis of downgrade resistance and operator incentives, see [Threat Model, Downgrade Resistance, and Operator Value](docs/threat-model-and-value.md).
+
+## Docs
+
+- [Threat Model, Downgrade Resistance, and Operator Value](docs/threat-model-and-value.md)
+- [MTA-Scoped Sender-Cost Mechanics](docs/sender-cost-mechanics.md)
+- [Email Volume Baselines for Threshold Design](docs/email-volume-baseline.md)
+- [The 2026 Cost and Operational Burden of Spam](docs/spam-costs-and-volumes.md)
 
 ## What Success Looks Like
 
@@ -257,7 +270,7 @@ There is plenty that can come later:
 
 Those are important, but they are not the first hill to climb.
 
-For a deeper problem statement, architecture overview, and MVP rationale, see \`docs/whitepaper.md\`.
+For deeper analysis, start with the [docs](#docs) folder links above.
 
 ## Why This Matters
 
