@@ -138,6 +138,7 @@ The important idea is simple:
 > The sender should bear the marginal cost of suspicious scale.
 
 For a deeper analysis of proof-of-work and other sender-cost mechanisms, see [Proof-of-Work Analysis](docs/proof-of-work-analysis.md).
+To discover how the VAMP native topology addresses accountability for abuse by preventing the use of intermediate relays, see [native transport topology](docs/native-transport-topology.md).
 
 That flips the current asymmetry.
 
