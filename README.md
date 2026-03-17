@@ -6,7 +6,7 @@
 
 VAMP is an open protocol for Identity-First Mail: a cryptographically verifiable, spam-resistant successor to legacy email.
 
-This project explores Identity-First Mail (IFM), a messaging model in which identity is cryptographic, capability is discoverable before send, native traffic is encrypted by default, and suspicious scale carries **[sender-side cost](docs/sender-cost-mechanics.md)**. VAMP is the protocol and reference implementation intended to realize that model.
+This project explores Identity-First Mail (IFM), a messaging model in which identity is cryptographic, capability is discoverable before send, native traffic is encrypted by default, and suspicious scale carries **[sender-side cost](docs/research/sender-cost-mechanics.md)**. VAMP is the protocol and reference implementation intended to realize that model.
 
 ## Why This Project Exists
 
@@ -68,7 +68,7 @@ VAMP starts from a different premise: the protocol should make identity verifiab
 
 The goal is not to build a prettier spam filter. It is to change the economics of messaging so abuse becomes harder to scale and easier to attribute.
 
-For a quantified 2026 snapshot of operator burden and spend, see [The 2026 Cost and Operational Burden of Spam](docs/spam-costs-and-volumes.md).
+For a quantified 2026 snapshot of operator burden and spend, see [The 2026 Cost and Operational Burden of Spam](docs/research/spam-costs-and-volumes.md).
 
 ## What We Believe Instead
 
@@ -131,14 +131,14 @@ The current system makes large-scale abuse too cheap.
 
 We want a system where normal human communication remains easy, but bulk or unknown sending behavior triggers explicit cost. That cost could be computational, economic, or policy-based. The exact mechanism can evolve later.
 
-For a concrete, operator-aligned cost model and initial threshold ideas, see [MTA-Scoped Sender-Cost Mechanics](docs/sender-cost-mechanics.md) and [Email Volume Baselines for Threshold Design](docs/email-volume-baseline.md).
+For a concrete, operator-aligned cost model and initial threshold ideas, see [MTA-Scoped Sender-Cost Mechanics](docs/research/sender-cost-mechanics.md) and [Email Volume Baselines for Threshold Design](docs/research/email-volume-baseline.md).
 
 The important idea is simple:
 
 > The sender should bear the marginal cost of suspicious scale.
 
-For a deeper analysis of proof-of-work and other sender-cost mechanisms, see [Proof-of-Work Analysis](docs/proof-of-work-analysis.md).
-To discover how the VAMP native topology addresses accountability for abuse by preventing the use of intermediate relays, see [native transport topology](docs/native-transport-topology.md).
+For a deeper analysis of proof-of-work and other sender-cost mechanisms, see [Proof-of-Work Analysis](docs/research/proof-of-work-analysis.md).
+To discover how the VAMP native topology addresses accountability for abuse by preventing the use of intermediate relays, see [native transport topology](docs/research/native-transport-topology.md).
 
 That flips the current asymmetry.
 
@@ -167,14 +167,14 @@ That means receiving systems need downgrade-aware policy. At a high level:
 
 In other words, interoperability matters, but downgrade abuse must not be allowed to hollow out the protocol. Compatibility is a bridge for migration, not an escape hatch from accountability.
 
-For a deeper deployment/threat-model analysis of downgrade resistance and operator incentives, see [Threat Model, Downgrade Resistance, and Operator Value](docs/threat-model-and-value.md).
+For a deeper deployment/threat-model analysis of downgrade resistance and operator incentives, see [Threat Model, Downgrade Resistance, and Operator Value](docs/research/threat-model-and-value.md).
 
 ## Docs
 
-- [Threat Model, Downgrade Resistance, and Operator Value](docs/threat-model-and-value.md)
-- [MTA-Scoped Sender-Cost Mechanics](docs/sender-cost-mechanics.md)
-- [Email Volume Baselines for Threshold Design](docs/email-volume-baseline.md)
-- [The 2026 Cost and Operational Burden of Spam](docs/spam-costs-and-volumes.md)
+- [Threat Model, Downgrade Resistance, and Operator Value](docs/research/threat-model-and-value.md)
+- [MTA-Scoped Sender-Cost Mechanics](docs/research/sender-cost-mechanics.md)
+- [Email Volume Baselines for Threshold Design](docs/research/email-volume-baseline.md)
+- [The 2026 Cost and Operational Burden of Spam](docs/research/spam-costs-and-volumes.md)
 
 ## What Success Looks Like
 
