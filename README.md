@@ -139,6 +139,7 @@ The important idea is simple:
 
 For a deeper analysis of proof-of-work and other sender-cost mechanisms, see [Proof-of-Work Analysis](docs/research/proof-of-work-analysis.md).
 To discover how the VAMP native topology addresses accountability for abuse by preventing the use of intermediate relays, see [native transport topology](docs/research/native-transport-topology.md).
+For a concrete model for consent-proven newsletters, notifications, and mailing lists, see [WebAuthn-Style Subscription Authorization for VAMP](docs/research/signed-subscriptions.md).
 
 That flips the current asymmetry.
 
@@ -175,6 +176,7 @@ For a deeper deployment/threat-model analysis of downgrade resistance and operat
 - [MTA-Scoped Sender-Cost Mechanics](docs/research/sender-cost-mechanics.md)
 - [Email Volume Baselines for Threshold Design](docs/research/email-volume-baseline.md)
 - [The 2026 Cost and Operational Burden of Spam](docs/research/spam-costs-and-volumes.md)
+- [WebAuthn-Style Subscription Authorization for VAMP](docs/research/signed-subscriptions.md)
 
 ## What Success Looks Like
 
@@ -211,7 +213,7 @@ It is not a product pitch dressed up as a protocol. The goal is an open, impleme
 
 It is not asking ordinary users to manage personal key material, compare fingerprints, or carry long-lived cryptographic identity between employers. It makes no expectation that users will understand or interact with keys at all, in fact the contrary is true: the system should be designed to make key management invisible for users in the normal case.
 
-It is not trying to make anonymous bulk messaging easier, verified bulk messaging is a use case that has not yet been planned for, but the system should be designed to allow it in a way that does not undermine the core value of verifiable identity and sender accountability.
+It is not trying to make anonymous bulk messaging easier. Verified bulk messaging is being explored as a consent-proven model for newsletters, notifications, and list services, with recipient-verifiable authorization that does not undermine identity and sender accountability.
 
 It is not assuming that perfect privacy, perfect openness, perfect interoperability, and zero friction can all be had at once. Adversarial systems do not work that way.
 
